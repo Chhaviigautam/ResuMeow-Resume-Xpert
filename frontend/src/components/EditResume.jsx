@@ -7,7 +7,8 @@ import { TitleInput } from "../components/Input"
 import axiosInstance from "../utils/axiosInstance"
 import { API_PATHS } from "../utils/apiPaths"
 
-import html2pdf from "html2pdf.js"
+import html2pdf from "html2pdf.cjs.js"
+import RenderResume from "./RenderResume"
 
 
 import {

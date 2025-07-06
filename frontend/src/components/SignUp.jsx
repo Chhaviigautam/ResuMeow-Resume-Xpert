@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { validateEmail } from '../utils/helper'
 import axiosInstance from '../utils/axiosInstance';
 import { Input } from './Input';
+import { API_PATHS } from '../utils/apiPaths';
 
 const SignUp = ({setCurrentPage}) => {
 
@@ -17,6 +18,8 @@ const SignUp = ({setCurrentPage}) => {
 
 
   const handleSignUp = async (e) => {
+    console.log(" AXIOS URL",API_PATHS.AUTH.REGISTER)
+    console.log("DATA", {fullName, email, password})
     e.preventDefault();
     if(!fullName) {
       setError('Please enter fullName')
