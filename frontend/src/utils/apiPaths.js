@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:4000'
+export const BASE_URL = 'https://resumeow-resume-xpert-1.onrender.com'
 
 //ROUTES USED FOR FRONTEND
 export const API_PATHS = {

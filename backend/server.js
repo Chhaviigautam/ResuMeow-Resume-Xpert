@@ -28,7 +28,7 @@ app.use(
     '/uploads',
     express.static(path.join(__dirname, 'uploads'), {
         setHeaders: (res, _path) => {
-            res.set('Access-control-Allow-Origin','http://localhost:5173')
+            res.set('Access-control-Allow-Origin','https://resu-meow-resume-xpert.vercel.app/')
         }
     })
 )
@@ -40,5 +40,5 @@ app.get('/', (req,res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`server started on http://localhost:${PORT}`)
+    console.log(`server started on ${'https://resumeow-resume-xpert-1.onrender.com'}`)
 })
