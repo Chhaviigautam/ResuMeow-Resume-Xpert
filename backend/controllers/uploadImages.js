@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 import Resume from '../models/resumeModel.js'
-import upload from '../middleware/uploadMiddleware.js'
+import upload from '../middleware/uploadmiddleware.js'
 
 export const uploadResumeImages = async (req, res) => {
     try {
