@@ -22,7 +22,7 @@ export const uploadResumeImages = async (req, res) => {
 
                 // USE PROCESS CWD TO LOCATE UPLODS FOLDER
                 const uploadsFolder = path.join(process.cwd(), "uploads")
-                const baseUrl = 'https://new-meow.onrender.com'
+                const baseUrl = 'https://resumeow-resume-xpert-2.onrender.com'
 
                 const newThumbnail = req.files.thumbnail?.[0];
                 const newProfileImage = req.files.profileImage?.[0];

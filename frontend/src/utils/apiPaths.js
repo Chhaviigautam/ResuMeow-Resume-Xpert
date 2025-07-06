@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://new-meow.onrender.com'
+export const BASE_URL = 'https://resumeow-resume-xpert-2.onrender.com'
 
 //ROUTES USED FOR FRONTEND
 export const API_PATHS = {
