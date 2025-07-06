@@ -55,7 +55,7 @@ const SignUp = ({setCurrentPage}) => {
     <div className={styles.signupContainer}>
       <div className={styles.headerWrapper}>
         <h3 className={styles.signupTitle}>Create Account</h3>
-        <p className={styles.signupsubtitle}>Join thousands of professionals today</p>
+        <p className={styles.signupSubtitle}>Join thousands of professionals today</p>
       </div>
 
       {/* form */}
@@ -76,9 +76,18 @@ const SignUp = ({setCurrentPage}) => {
         type='password' />
 
         {error && <div className={styles.errorMessage}>{error}</div>}
-        <button type = 'submit' className={styles.signupSwitchButton}>
-          Sign In
+        <button type = 'submit' className={styles.signupSubmit}>
+          Sign Up
         </button>
+
+        <p className={styles.switchText}>
+                  Already Have an Account{' '}
+                  <button type='button'
+                  onClick= {() => setCurrentPage('login')}
+                  className={styles.switchButton}>
+                    Log In
+                  </button>
+                </p>
       </form>
     </div>
   )
