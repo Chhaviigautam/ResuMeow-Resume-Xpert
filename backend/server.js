@@ -15,7 +15,7 @@ const app = express();
 const PORT = 3001;
 
 app.use(cors({
-    origin: 'https://resu-meow-resume-xpert.vercel.app/', 
+    origin: 'https://resu-meow-resume-xpert.vercel.app', 
     credentials: true
 }))
 
@@ -31,7 +31,7 @@ app.use(
     '/uploads',
     express.static(path.join(__dirname, 'uploads'), {
         setHeaders: (res, _path) => {
-            res.set('Access-Control-Allow-Origin','https://resu-meow-resume-xpert.vercel.app/')
+            res.set('Access-Control-Allow-Origin','https://resu-meow-resume-xpert.vercel.app')
         }
     })
 )
