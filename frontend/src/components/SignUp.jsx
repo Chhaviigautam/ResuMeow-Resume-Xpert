@@ -4,6 +4,7 @@ import { UserContext } from '../context/UserContext';
 import { useNavigate } from 'react-router-dom'
 import { validateEmail } from '../utils/helper'
 import axiosInstance from '../utils/axiosInstance';
+import { Input } from './Input';
 
 const SignUp = ({setCurrentPage}) => {
 
