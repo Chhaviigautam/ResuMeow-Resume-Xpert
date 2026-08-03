@@ -47,5 +47,5 @@ app.get('/', (req,res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`server started on ${'https://resumeow-resume-xpert-1.onrender.com'}`)
+    console.log(`Server started on http://localhost:${PORT}`)
 })

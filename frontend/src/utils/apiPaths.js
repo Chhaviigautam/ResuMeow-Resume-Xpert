@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://resumeow-resume-xpert-1.onrender.com'
+export const BASE_URL = import.meta.env.VITE_BASE_URL || 'http://localhost:4000'
 
 //ROUTES USED FOR FRONTEND
 export const API_PATHS = {
