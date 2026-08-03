@@ -14,10 +14,13 @@ const __dirname = path.dirname(__filename)
 const app = express();
 const PORT = 4000;
 
-app.use(cors(
-    {origin: 'https://resu-meow-resume-xpert.vercel.app/', 
-    credentials:true}
-))
+app.use(cors({
+    origin: [
+        "http://localhost:5173",
+        "https://resu-meow-resume-xpert.vercel.app"
+    ],
+    credentials: true
+}))
 
 //CONNECT Data base DB
 connectDB();
@@ -27,11 +30,12 @@ app.use(express.json())
 app.use('/api/auth', userRoutes)
 app.use('/api/resume', resumeRoutes)
 
+
 app.use(
     '/uploads',
     express.static(path.join(__dirname, 'uploads'), {
         setHeaders: (res, _path) => {
-            res.set('Access-control-Allow-Origin','https://resu-meow-resume-xpert.vercel.app/')
+            res.set('Access-Control-Allow-Origin','https://resu-meow-resume-xpert.vercel.app/')
         }
     })
 )
