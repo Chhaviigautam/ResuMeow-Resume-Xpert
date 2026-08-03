@@ -2,11 +2,16 @@ import mongoose from "mongoose";
 
 export const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.mongoDBURL)
-        console.log("DB connected")
+        if (!process.env.mongoDBURL) {
+            console.error("mongoDBURL environment variable is missing!");
+            return;
+        }
+        await mongoose.connect(process.env.mongoDBURL, {
+            serverSelectionTimeoutMS: 5000,
+        });
+        console.log("DB connected");
     } 
     catch (err) {
-        console.error("db error", err)
-        process.exit(1)
+        console.error("DB Connection Error:", err.message);
     }
 }
