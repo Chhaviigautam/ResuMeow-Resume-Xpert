@@ -14,25 +14,12 @@ const __dirname = path.dirname(__filename)
 const app = express();
 const PORT = 4000;
 
-const allowedOrigins = [
-    "http://localhost:5173",
-    "http://localhost:5174",
-    "https://resu-meow-resume-xpert.vercel.app"
-];
-
 app.use(cors({
-    origin: (origin, callback) => {
-        if (!origin) return callback(null, true);
-        if (allowedOrigins.includes(origin) || origin.endsWith('.vercel.app')) {
-            return callback(null, true);
-        }
-        return callback(null, true); // Fallback allow for web requests
-    },
+    origin: true,
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }))
-app.options('*', cors());
 
 //CONNECT Data base DB
 connectDB();
@@ -47,7 +34,7 @@ app.use(
     '/uploads',
     express.static(path.join(__dirname, 'uploads'), {
         setHeaders: (res, _path) => {
-            res.set('Access-Control-Allow-Origin','https://resu-meow-resume-xpert.vercel.app/')
+            res.set('Access-Control-Allow-Origin', 'https://resu-meow-resume-xpert.vercel.app')
         }
     })
 )
