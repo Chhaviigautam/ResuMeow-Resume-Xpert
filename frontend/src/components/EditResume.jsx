@@ -7,7 +7,6 @@ import { TitleInput } from "../components/Input"
 import axiosInstance from "../utils/axiosInstance"
 import { API_PATHS } from "../utils/apiPaths"
 
-import html2pdf from "html2pdf.cjs.js"
 import RenderResume from "./RenderResume"
 
 
@@ -31,7 +30,6 @@ import {
     iconStyles,
 } from "../assets/dummystyle"
 import StepProgress from "./StepProgress"
-import RenderResume from "./RenderResume"
 import Modal from "./Modal"
 import ThemeSelector from "./ThemeSelector"
 
